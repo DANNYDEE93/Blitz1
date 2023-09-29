@@ -53,7 +53,7 @@ Scroll down to web applicaiton firewall (WAF)
 
 After establishing a CDN to store the images and videos on the webpage of the application, I ran another test that showed the amount of latency for the test server to reach the web application reduced to 9.652 ms. The CDN helps further reduce latency by caching or temporarily storing the static content of the application which includes the web page so that users can access the content over the internet quicker. I reduced the communication across the internet for the users to reach the web page because the servers have less content to deliver with the CDN's getting accessed before it, which ultimately decreases the web traffic to the server. Knowing where users are located helps SRE engineers know how to measure the amount latency that users experience. 
 
-!(https://github.com/DANNYDEE93/Latency_Test/blob/main/blitz1.jpg)
+![](https://github.com/DANNYDEE93/Latency_Test/blob/main/blitz1.jpg)
  
 
 
