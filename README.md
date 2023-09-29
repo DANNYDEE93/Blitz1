@@ -60,5 +60,6 @@ After establishing a CDN to store the images and videos on the webpage of the ap
 ALTERNATIVE WAYS TO CONTROL WEB TRAFFIC 
 ________________________________________
 -Create a new EC2 instance and load balancers to split up the traffic amongst multiple servers.
--Ping the application with multiple requests to test the durability of the server to handle increased web traffic.
+-Ping the application with multiple get requests to test the durability of the server to handle increased web traffic.
+ Check how long it takes for packets to be retrieved to measure latency
 -Increase availability zones to balance out the traffic if overwhelmed with requests.
