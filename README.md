@@ -1,11 +1,11 @@
-### **OBSERVABILITY OF URL SHORTENER FUNCTIONALITY**
+### <ins>**OBSERVABILITY OF URL SHORTENER FUNCTIONALITY**</ins>
 #### **Danielle Davis**
 #### **September 30, 2023**
 
 
 
 
-##### **PURPOSE**
+##### <ins>**PURPOSE**</ins>
 _________________________
 
 &emsp;&emsp;&emsp;&emsp;    "The Story: Nike emailed you about the URL Shortener. In Nike's email, Nike mentioned customers are complaining about the amount of time it takes to load their webpages. Nike will like us to reduce the amount of latency customers are experiencing." As an SRE engineer in this scenario, I need to test the functionality of the URL shortener associated with the web application. For Nike's standards and business needs, it isn't enough for the web application to just function. The application needs to be continuously optimized and tested to increase functionality as user traffic increases to the web page server. To truly measure the speed at which users can access the web application, I need to use a tool to measure the latency before and after our chosen solution with multiple tests to ensure latency is reduced. Overall, I need to improve the functionality of the services that the URL shortener for the Nike web application provides for Nike and its users. 
@@ -13,10 +13,10 @@ _________________________
 
 
 
-##### **LATENCY MEASUREMENT TESTING WITH JMETER**
+##### <ins>**LATENCY MEASUREMENT TESTING WITH JMETER**</ins>
 ________________
 
-**Fill out Blitz Creation Form:** 
+**Fill out Blitz Creation Form:**
 
 - Test Plan Section: Choose 'basic traffic increase' under **Blitz package**
 - Thread group section: Select **1000** for **number of threads (users)** (*simulated user traffic based on if users tried to access the URL shortener at the same time to see how the web  application can handle it*)
@@ -33,7 +33,7 @@ ________________
 
 
 
-##### **CREATING A CDN IN FRONT OF THE URL SHORTENER**
+##### <ins>**CREATING A CDN IN FRONT OF THE URL SHORTENER**</ins>
 ______________________________________
 
 1. Go to CloudFront on AWS
@@ -79,7 +79,7 @@ ______________________________________
 
 
 
-##### **ALTERNATIVE WAYS TO CONTROL WEB TRAFFIC** 
+##### <ins>**ALTERNATIVE WAYS TO CONTROL WEB TRAFFIC**</ins> 
 ________________________________________
 -Create a new EC2 instance and load balancers to split up the traffic amongst multiple servers.
 
