@@ -3,10 +3,14 @@
 #### **September 30, 2023**
 
 
+
+
 ##### **PURPOSE**
 _________________________
 
 &emsp;&emsp;&emsp;&emsp;    "The Story: Nike emailed you about the URL Shortener. In Nike's email, Nike mentioned customers are complaining about the amount of time it takes to load their webpages. Nike will like us to reduce the amount of latency customers are experiencing." As an SRE engineer in this scenario, I need to test the functionality of the URL shortener associated with the web application. For Nike's standards and business needs, it isn't enough for the web application to just function. The application needs to be continuously optimized and tested to increase functionality as user traffic increases to the web page server. To truly measure the speed at which users can access the web application, I need to use a tool to measure the latency before and after our chosen solution with multiple tests to ensure latency is reduced. Overall, I need to improve the functionality of the services that the URL shortener for the Nike web application provides for Nike and its users. 
+
+
 
 
 ##### **LATENCY MEASUREMENT TESTING WITH JMETER**
@@ -25,6 +29,8 @@ ________________
 
 
 &emsp;&emsp;&emsp;&emsp;    Using the same region and availability zone as where the web application was deployed from, I ran the first Jmeter latency test in the same region and availability zone. It took the test server 40.879ms to access the web application. This amount of latency is too high and does not meet Nike's standards because it’s causing a negative user experience according to their customer feedback. We want something to capture the traffic, so I created a CDN(content delivery/distribution network) through AWS CloudFront to establish interconnected servers across availability zones to reduce the distance between users and the webpage server.
+
+
 
 
 ##### **CREATING A CDN IN FRONT OF THE URL SHORTENER**
@@ -55,12 +61,16 @@ Use edge location under settings:
 
 11. Take **distribution domain name** to run another Jmeter test
 
-&emsp;&emsp;&emsp;&emsp;     After establishing a CDN to store the images and videos on the webpage of the application, I ran another test that showed the amount of latency for the test server to reach the web application reduced to 9.652ms. The CDN helps further reduce latency by caching or temporarily storing the static content of the application which includes the web page so that users can access the content over the internet quicker. I reduced the communication across the internet for the users to reach the web page because the servers have less content to deliver with the CDN getting accessed before it, which ultimately decreases the web traffic to the server. Knowing where users are located helps SRE engineers know how to measure the amount of latency to optimize user experience through testing and updating application configurations.
 
 
 
 ![Before & After CDN](https://github.com/DANNYDEE93/Blitz1/blob/main/Blitz1Diagram.jpg)
- 
+
+
+
+
+&emsp;&emsp;&emsp;&emsp;     After establishing a CDN to store the images and videos on the webpage of the application, I ran another test that showed the amount of latency for the test server to reach the web application reduced to 9.652ms. The CDN helps further reduce latency by caching or temporarily storing the static content of the application which includes the web page so that users can access the content over the internet quicker. I reduced the communication across the internet for the users to reach the web page because the servers have less content to deliver with the CDN getting accessed before it, which ultimately decreases the web traffic to the server. Knowing where users are located helps SRE engineers know how to measure the amount of latency to optimize user experience through testing and updating application configurations.
+
 
 
 
