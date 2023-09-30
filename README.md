@@ -46,18 +46,23 @@ ______________________________________
 
 5. Port 80 
 
-Scroll down to Cache Key and origin requests:
+<ins>Scroll down to Cache Key and origin requests:</ins>
+
 6. Click **cache policy** --> select **cache optimized** *(to cache static content)*
 
-Scroll down to web application firewall (WAF):
+<ins>Scroll down to web application firewall (WAF):</ins>
+
 7. Do not enable security protections *(A web applicaton firewall was not necessary for this test. In the future, I would want to enable this service to  protect my applications from miscellaneous activity that may negatively affect the application's functionality)*
 
-Use edge location under settings:
+<ins>Use edge location under settings:</ins>
+
 8. Use all edge locations *(suggested best choice for performance because this service comes with established edge locations of servers and multiple backup server locations. In case one data center location of servers goes down, there are other locations that can take the web traffic. These locations are also cached through regional edge caches to store the regional locations of data centers.)*
 
 9. Select **Create distribution**
 
-10. Go back to list of distributions --> copy distribution domain name --> paste URL in another browser. [The web application was served up by the server quickly, but this is not an accurate measurement for the latency. Hence, the benefits of Jmeter to measure the latency experienced through simulated web traffic when accessing the web application across the internet]
+10. Go back to list of distributions --> copy distribution domain name --> paste URL in another browser.
+
+*[The web application was served up by the server quickly, but this is not an accurate measurement for the latency. Hence, the benefits of Jmeter to measure the latency experienced through simulated web traffic when accessing the web application across the internet]*
 
 11. Take **distribution domain name** to run another Jmeter test
 
@@ -69,7 +74,7 @@ Use edge location under settings:
 
 
 
-&emsp;&emsp;&emsp;&emsp;     After establishing a CDN to store the images and videos on the webpage of the application, I ran another test that showed the amount of latency for the test server to reach the web application reduced to 9.652ms. The CDN helps further reduce latency by caching or temporarily storing the static content of the application which includes the web page so that users can access the content over the internet quicker. I reduced the communication across the internet for the users to reach the web page because the servers have less content to deliver with the CDN getting accessed before it, which ultimately decreases the web traffic to the server. Knowing where users are located helps SRE engineers know how to measure the amount of latency to optimize user experience through testing and updating application configurations.
+&emsp;&emsp;&emsp;&emsp;     After establishing a CDN to store the images and videos on the webpage of the application, I ran another Jmeter test that showed the amount of latency for the test server to reach the web application reduced to 9.652ms. The CDN helps further reduce latency by caching or temporarily storing the static content of the application which includes the web page so that users can access the content over the internet quicker. I reduced the communication across the internet for the users to reach the web page because the servers have less content to deliver with the CDN getting accessed before it, which ultimately decreases the web traffic to the server. Knowing where users are located helps SRE engineers know how to measure the amount of latency to optimize user experience through testing and updating application configurations.
 
 
 
